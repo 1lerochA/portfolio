@@ -148,14 +148,14 @@
 
         <section class="contact" id="contact">
             <h2 align="center" class="taille">Contacté <span>Moi</span></h2>
-            <form action="">
+            <form action="send_email.php" method="POST">
                 <div class="input-box">
                     <input type="text" name="nom" placeholder="Nom" required>
-                    <input type="email" placeholder="Email" required>
-                    <input type="Number" placeholder="Numéro de téléhpone" required>
-                    <input type="text" placeholder="Sujet" >
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="number" name="telephone" placeholder="Numéro de téléphone" required>
+                    <input type="text" name="sujet" placeholder="Sujet" required>
                 </div>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Vôtre message"></textarea>
+                <textarea name="message" cols="30" rows="10" placeholder="Votre message" required></textarea>
                 <input type="submit" value="Envoyé le message" class="btn">
             </form>
         </section>
