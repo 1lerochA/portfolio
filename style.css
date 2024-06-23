@@ -277,7 +277,7 @@ span{
 }
 .services-container {
    display: flex; 
-   grid-template-columns: repeat(3, 1fr);
+   grid-template-columns: repeat(3);
    align-items: center;
    padding-top: 50px;
    justify-content: center;
@@ -285,7 +285,8 @@ span{
 }
 .service-box{
     background-color: var(--main-color);
-    height: 300px;
+    height: 350px;
+    width: 600px;
     border-radius: 3rem;
     cursor: pointer;
     transition: 0.3s ease;
@@ -340,7 +341,7 @@ span{
     background: var(--bg-color);
 }
 .compétences .container{
-    background: #e1352c54;
+    background: rgb(19, 152, 193);
     color: var(--text-color);
     border-radius: 1rem;
     padding: 2rem;
