@@ -206,7 +206,7 @@ span{
     position: relative;
 }
 .typing-text span::before{
-    content: 'Software Developper';
+    content: 'Developpeur web';
     color: var(--main-color);
     animation: words 20s infinite;
 }
@@ -227,10 +227,10 @@ span{
 }
 @keyframes words {
     0%, 50%{
-        content: 'Developper web ';
+        content: 'Developpement web ';
     }
     51%, 100%{
-        content: 'Admin Reseaux';
+        content: 'Administration Reseaux';
     }
 }
 @keyframes typing {
