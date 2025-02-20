@@ -1,5 +1,3 @@
-import emailjs from '@emailjs/browser';
-
 function sendEmail(e) {
     e.preventDefault(); // Empêche le rechargement de la page lors de l'envoi du formulaire
 
@@ -13,6 +11,3 @@ function sendEmail(e) {
           alert("Une erreur est survenue. Veuillez réessayer.");
       });
 }
-
-// Initialisation d'EmailJS avec ta clé publique
-emailjs.init('jXg14OMTd1NcqRSSF');
