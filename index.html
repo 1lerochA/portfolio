@@ -150,7 +150,7 @@
 
         <section class="contact" id="contact">
             <h2 align="center" class="taille">Contacte <span>Moi</span></h2>
-            <form id="contact-form">
+            <form id="contact-form" onsubmit="sendEmail(event)">
                 <div class="input-box">
                     <input type="text" name="from_name" placeholder="Nom" required>
                     <input type="email" name="email" placeholder="Email" required>
