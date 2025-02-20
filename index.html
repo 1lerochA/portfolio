@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 
 <head>
@@ -6,89 +7,175 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
 
-<body>
-    <header class="header">
-        <a href="#acceuil" class="logo">Alexis</a>
+    <body>
+        <header class="header">
+            <a href="#acceuil" class="logo">Alexis</a>
 
-        <i class="fa-solid fa-bars menu-icon"></i>
+            <i class="fa-solid fa-bars" class="menu-icon"></i>
 
-        <nav class="navbar">
-            <a href="#acceuil" class="active">Accueil</a>
-            <a href="#services">Projets</a>
-            <a href="#compétences">Compétences</a>
-            <a href="#etude">Etude</a>
-            <a href="#contact">Contact</a>
-            <a href="Stage.html">Stage</a>
-            <a href="cv.html">Mon CV</a>
-        </nav>
-    </header>
+            <nav class="navbar">
+                <a href="#acceuil" class="active">Accueil</a>
+                <a href="#services">Projets</a>
+                <a href="#compétences">Compétences</a>
+                <a href="#etude">Etude</a>
+                <a href="#contact">Contact</a>
+                <a href="Stage.html">Stage</a>
+                <a href="cv.html">Mon CV</a>
 
-    <section class="acceuil" id="acceuil">
-        <div class="acceuil-img">
-            <img src="image/img1.png" alt="">
-        </div>
-        <div class="home content">
-            <h1 class="taille"><span>Alexis Le Rocheleuil</span></h1>
-            <h3 class="typing-text">Etudiant en <span></span></h3>
-            <p class="paragraphe">Je suis actuellement étudiant au lycée Merleau-Ponty situé à Rochefort en BTS SIO (Services Informatique aux Organisations) option SLAM (Solutions Logicielles et Applications Métiers) en première année</p>
+            </nav>
+        </header>
 
-            <div class="social-icon">
+        <section class="acceuil" id="acceuil">
+            <div class="acceuil-img">
+                <img src="image/img1.png" alt="">
+            </div>
+            <div class="home content">
+                <h1 class="taille"><span>Alexis Le Rocheleuil</span></h1>
+                <h3 class="typing-text">Etudiant en <span></span></h3>
+                <p class="paragraphe">Je suis actuellement etudiant au lycée Merleau-Ponty situé à rochefort en BTS SIO (Services Informatique
+                    aux Organisations) option SLAM  (Solutions Logicielles et Applications Métiers) en première année
+                </p>
+
+                <div class="social-icon">
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/1lerochA"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+
+                <a href="#etude" class="btn">À propos de moi</a>
+                
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <h2 align="center" class="taille">Mes <span>Projets</span></h2>
+
+            <div class="services-container">
+                <a href="http://essences.btssio17.com/">
+                    <div class="service-box">
+                        <div  class="service-info">
+                            <h4>Site essence de bois</h4>
+                            <p class="paragraphe"><img src="image/site.png" class="photo4"></p>
+                        </div>
+                    </div>
+                </a>
+                </div>
+        </section>
+
+        <section class="compétences" id="compétences">
+            <h2 align="center" class="taille">Compétences</h2>
+            <div class="container">
+                <div class="row" id="compétencesContainer">
+                    <div class="bar">
+                        <div class="info">
+                            <img class="photo"   src="image/html.png">
+                            <span>Html</span>
+                        </div>
+                    </div>
+                    <div class="bar">
+                        <div class="info">
+                            <img class="photo1" src="image/css.png">
+                            <span>CSS</span>
+                        </div>
+                    </div>
+                    <div class="bar">
+                        <div class="info">
+                            <img class="photo2"   src="image/java.png">
+                            <span>Java</span>
+                        </div>
+                    </div>
+                    <div class="bar">
+                        <div class="info">
+                            <img class="photo"   src="image/javascript.png">
+                            <span>Javascript</span>
+                        </div>
+                    </div>
+                    <div class="bar">
+                        <div class="info">
+                            <img class="photo"   src="image/python.png">
+                            <span>Python</span>
+                        </div>
+                    </div>
+                    <div class="bar">
+                        <div class="info">
+                            <img class="photo3"   src="image/php.png">
+                            <span>Php</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="etude" id="etude">
+            <h2 align="center" class="taille">Mes <span>études</span></h2>
+            <div class="timeline">
+                <div class="container right">
+                    <div class="content">
+                        <div class="tag">
+                            <h2>Collège André Dulin</h2>
+                        </div>
+                        <div class="decs">
+                            <p>Situé à Aigrefeuille-d'Aunis</br>
+                                Diplôme obtenu : Diplôme National du Brevet </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container left">
+                    <div class="content">
+                        <div class="tag">
+                            <h2>Lycée Rompsay</h2>
+                        </div>
+                        <div class="decs">
+                            <p> Situé à La Rochelle</br>
+                                Diplôme obtenu : Baccalauréat  Professionnel Système Numérique (sn) mention  Bien</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container right">
+                    <div class="content">
+                        <div class="tag">
+                            <h2>Bts Lycée Merleau-Ponty</h2>
+                        </div>
+                        <div class="decs">
+                            <p>Rochefort</br>
+                                BTS Services Informatiques aux Organisations option Solutions Logicielles et Applications Métiers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h2 align="center" class="taille">Contacte <span>Moi</span></h2>
+            <form action="">
+                <div class="input-box">
+                    <input type="text" name="nom" placeholder="Nom" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="Number" placeholder="Numéro de téléhpone">
+                    <input type="text" placeholder="Sujet" required>
+                </div>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Votre message"></textarea>
+                <input type="submit" value="Envoye le message" class="btn">
+            </form>
+        </section>
+        
+
+        <footer class="footer">
+            <div class="social">
                 <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://github.com/1lerochA"><i class="fa-brands fa-github"></i></a>
                 <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
             </div>
-
-            <a href="#etude" class="btn">À propos de moi</a>
-        </div>
-    </section>
-
-    <section class="services" id="services">
-        <h2 align="center" class="taille">Mes <span>Projets</span></h2>
-
-        <div class="services-container">
-            <a href="http://essences.btssio17.com/">
-                <div class="service-box">
-                    <div class="service-info">
-                        <h4>Site essence de bois</h4>
-                        <p class="paragraphe"><img src="image/site.png" class="photo4"></p>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <h2 align="center" class="taille">Contactez <span>Moi</span></h2>
-        <form id="contact-form">
-            <div class="input-box">
-                <input type="text" name="from_name" placeholder="Nom" required>
-                <input type="email" name="reply_to" placeholder="Email" required>
-                <input type="number" name="phone" placeholder="Numéro de téléphone">
-                <input type="text" name="subject" placeholder="Sujet" required>
-            </div>
-            <textarea name="message" placeholder="Votre message" required></textarea>
-            <input type="submit" value="Envoyer le message" class="btn">
-        </form>
-    </section>
-
-    <footer class="footer">
-        <div class="social">
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/1lerochA"><i class="fa-brands fa-github"></i></a>
-            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
-        </div>
-        <ul class="list">
-            <li><a href="#services">Projets</a></li>
-            <li><a href="#etude">À propos</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-
-</html>
+            <ul class="list">
+                <li><a href="#services">Projets</a></li>
+                <li><a href="#etude">À propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </footer>
+        <script src="script.js"></script>
+        
+    </body>
+    </html>
