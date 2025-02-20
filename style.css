@@ -603,7 +603,6 @@ span {
     border: 2px solid var(--main-color);
     margin: 1rem 0;
     resize: none;
-    height: 150px;
 }
 .contact form .btn{
     margin-top: 2rem;
