@@ -1,60 +1,45 @@
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
-
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav ul li a');
-
-window.onscroll = () => {
-    sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
-
-        if(top >= offset && top < offset + height){
-            navLinks.forEach(links => {
-                links.classList.remove('active');
-                document.querySelector('header nav ul li a [href*=' + id + ' ]').classList.add(active)
-            })
-        }
-    })
-}
-
 document.addEventListener("DOMContentLoaded", function() {
-    const menuIcon = document.querySelector('.menu-icon');
+    // Sélecteurs principaux
+    const menuIcon = document.querySelector('.menu-icon');  // On cherche ici par la classe
     const navbar = document.querySelector('.navbar');
-
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('header nav ul li a');
+    
+    // Fonction pour afficher/masquer le menu
     if (menuIcon && navbar) {
-        // Fonction pour afficher et masquer le menu
         menuIcon.onclick = () => {
-            menuIcon.classList.toggle('bx-x'); // Si tu veux changer l'icône (comme croix)
-            navbar.classList.toggle('active'); // Toggle la classe pour afficher/masquer le menu
+            menuIcon.classList.toggle('bx-x');  // Pour changer l'icône en croix ou en burger
+            navbar.classList.toggle('active');  // Affiche ou masque le menu en ajoutant/enlevant la classe active
         };
     } else {
         console.error('menu-icon ou navbar non trouvé');
     }
 
-    // Fonction de scroll pour ajouter la classe active à l'élément de navigation correspondant
-    let sections = document.querySelectorAll('section');
-    let navLinks = document.querySelectorAll('header nav ul li a');
-
+    // Fonction de scroll pour ajouter la classe active à l'élément de navigation
     window.onscroll = () => {
+        let top = window.scrollY;
         sections.forEach(sec => {
-            let top = window.scrollY;
             let offset = sec.offsetTop - 150;
             let height = sec.offsetHeight;
             let id = sec.getAttribute('id');
 
-            if(top >= offset && top < offset + height){
-                navLinks.forEach(links => {
-                    links.classList.remove('active');
-                    if (document.querySelector('header nav ul li a[href*="' + id + '"]')) {
-                        document.querySelector('header nav ul li a[href*="' + id + '"]').classList.add('active');
-                    }
+            if (top >= offset && top < offset + height) {
+                // Suppression de la classe 'active' sur tous les liens
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
                 });
+
+                // Ajout de la classe 'active' au lien correspondant à la section visible
+                let activeLink = document.querySelector(`header nav ul li a[href*="${id}"]`);
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
             }
         });
     };
+
+
+
 
     // Initialisation d'EmailJS
     emailjs.init('jXg14OMTd1NcqRSSF'); // Remplace par ton propre ID EmailJS
