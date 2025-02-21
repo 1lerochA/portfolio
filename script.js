@@ -1,15 +1,30 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Sélecteurs principaux
-    const menuIcon = document.querySelector('.menu-icon');  // On cherche ici par la classe
+    const menuIcon = document.querySelector('.menu-icon');
     const navbar = document.querySelector('.navbar');
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('header nav ul li a');
     
     // Fonction pour afficher/masquer le menu
+    const toggleNavbarDisplay = () => {
+        if (window.innerWidth <= 1024) {
+            menuIcon.style.display = 'block'; // Affiche l'icône du menu
+            navbar.style.display = 'none';  // Cache le menu par défaut
+        } else {
+            menuIcon.style.display = 'none';  // Masque l'icône du menu
+            navbar.style.display = 'block';  // Affiche la navbar classique
+        }
+    };
+
+    // Vérifie la taille de la fenêtre au démarrage
+    toggleNavbarDisplay();
+
+    // Réajuste l'affichage du menu à chaque redimensionnement
+    window.addEventListener('resize', toggleNavbarDisplay);
+
     if (menuIcon && navbar) {
         menuIcon.onclick = () => {
-            menuIcon.classList.toggle('bx-x');  // Pour changer l'icône en croix ou en burger
-            navbar.classList.toggle('active');  // Affiche ou masque le menu en ajoutant/enlevant la classe active
+            menuIcon.classList.toggle('bx-x');
+            navbar.classList.toggle('active');
         };
     } else {
         console.error('menu-icon ou navbar non trouvé');
@@ -24,12 +39,10 @@ document.addEventListener("DOMContentLoaded", function() {
             let id = sec.getAttribute('id');
 
             if (top >= offset && top < offset + height) {
-                // Suppression de la classe 'active' sur tous les liens
                 navLinks.forEach(link => {
                     link.classList.remove('active');
                 });
 
-                // Ajout de la classe 'active' au lien correspondant à la section visible
                 let activeLink = document.querySelector(`header nav ul li a[href*="${id}"]`);
                 if (activeLink) {
                     activeLink.classList.add('active');
