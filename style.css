@@ -94,7 +94,11 @@ html::-webkit-scrollbar-thumb {
     color: var(--main-color);
     display: none;
 }
-
+@media (max-width: 1024px) {
+    .menu-icon {
+        display: block;  /* Affiche l'icône du menu burger sur les petits écrans */
+    }
+}
 @media (max-width: 995px) {
     #menu-icon {
         display: block;
