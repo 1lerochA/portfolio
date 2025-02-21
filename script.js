@@ -4,16 +4,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('header nav ul li a');
     
-    // Fonction pour afficher ou masquer le menu mobile
+    // Fonction pour afficher/masquer le menu
     const toggleNavbarDisplay = () => {
         if (window.innerWidth <= 1024) {
-            // Si l'écran est petit, on affiche l'icône du menu burger
-            menuIcon.style.display = 'block';
-            navbar.style.display = 'none'; // On cache le menu par défaut
+            menuIcon.style.display = 'block'; // Affiche l'icône du menu
+            navbar.style.display = 'none';  // Cache le menu par défaut
         } else {
-            // Si l'écran est assez grand, on affiche la navbar classique
-            menuIcon.style.display = 'none';
-            navbar.style.display = 'block';
+            menuIcon.style.display = 'none';  // Masque l'icône du menu
+            navbar.style.display = 'block';  // Affiche la navbar classique
         }
     };
 
@@ -23,9 +21,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // Réajuste l'affichage du menu à chaque redimensionnement
     window.addEventListener('resize', toggleNavbarDisplay);
 
-    // Lorsque l'on clique sur l'icône du menu burger, on affiche ou masque le menu
     if (menuIcon && navbar) {
         menuIcon.onclick = () => {
+            menuIcon.classList.toggle('bx-x');
             navbar.classList.toggle('active');
         };
     } else {
@@ -52,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     };
+
 
 
 
