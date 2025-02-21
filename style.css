@@ -111,10 +111,17 @@ html::-webkit-scrollbar-thumb {
         background-color: var(--second-bg-color);
         border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
         display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .navbar {
+        display: none;  /* Cacher par défaut */
+        transform: translateX(100%); /* Hors de l'écran pour l'animation */
     }
 
     .navbar.active {
         display: block;
+        transform: translateX(0); 
     }
 
     .navbar a {
