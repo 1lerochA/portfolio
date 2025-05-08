@@ -308,6 +308,12 @@ span {
         margin-top: 4rem;
     }
 }
+.flex-container {
+    display: flex;
+    justify-content: center; /* Centre les éléments horizontalement */
+    gap: 2rem; /* Ajoute un espace entre les éléments */
+    flex-wrap: wrap; /* Permet de passer à la ligne si l'espace est insuffisant */
+}
 
 /* services section */
 
@@ -315,12 +321,15 @@ span {
     background: var(--second-bg-color);
 }
 .services-container {
-   display: flex; 
-   grid-template-columns: repeat(3);
-   align-items: center;
-   padding-top: 50px;
-   justify-content: center;
-   gap: 2.5rem;
+    flex: 1; /* Permet aux éléments de prendre un espace égal */
+    max-width: 45%; /* Limite la largeur des éléments */
+    text-align: center; /* Centre le contenu à l'intérieur */
+    display: flex; 
+    grid-template-columns: repeat(3);
+    align-items: center;
+    padding-top: 50px;
+    justify-content: center;
+    gap: 2.5rem;
 }
 .service-box{
     background-color: var(--main-color);
