@@ -308,44 +308,46 @@ span {
         margin-top: 4rem;
     }
 }
-.flex-container {
-    display: flex;
-    justify-content: center; /* Centre les éléments horizontalement */
-    gap: 2rem; /* Ajoute un espace entre les éléments */
-    flex-wrap: wrap; /* Permet de passer à la ligne si l'espace est insuffisant */
-}
+
 
 /* services section */
 
-.services{
+.services {
     background: var(--second-bg-color);
 }
-.services-container {
-    flex: 1; /* Permet aux éléments de prendre un espace égal */
-    max-width: 45%; /* Limite la largeur des éléments */
-    text-align: center; /* Centre le contenu à l'intérieur */
-    display: flex; 
-    grid-template-columns: repeat(3);
-    align-items: center;
-    padding-top: 50px;
-    justify-content: center;
-    gap: 2.5rem;
+
+.flex-container {
+    display: flex; /* Active Flexbox */
+    justify-content: space-between; /* Sépare les éléments de façon égale */
+    gap: 2.5rem; /* Espacement entre les éléments */
+    flex-wrap: wrap; /* Permet aux éléments de se répartir sur plusieurs lignes si nécessaire */
+    padding: 50px 0; /* Un peu de padding pour espacer du haut */
 }
-.service-box{
+
+.services-container {
+    flex: 1; /* Permet à chaque élément de prendre une largeur égale */
+    max-width: 45%; /* Limite la largeur des éléments à 45% de la largeur du conteneur parent */
+    text-align: center; /* Centre le contenu à l'intérieur */
+    padding-top: 50px;
+}
+
+.service-box {
     background-color: var(--main-color);
     height: 350px;
-    width: 600px;
+    width: 100%; /* Prend 100% de la largeur disponible */
     border-radius: 3rem;
     cursor: pointer;
     transition: 0.3s ease;
 }
-.service-box:hover{
+
+.service-box:hover {
     background: transparent;
     color: var(--text-color);
     transform: scale(1.03);
     border: 1px solid var(--main-color);
 }
-.service-box .service-info{
+
+.service-box .service-info {
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -354,34 +356,54 @@ span {
     align-items: center;
     padding: 5em;
 }
-.service-info h4{
+
+.service-info h4 {
     font-size: 2.5rem;
     font-weight: 500;
     margin-bottom: 1rem;
 }
-.service-info p{
+
+.service-info p {
     font-size: 1.6rem;
     font-weight: 400;
     max-height: 100px;
     margin: auto;
 }
-@media (max-width:991px){
-    section{
+
+@media (max-width: 991px) {
+    section {
         padding: 10rem 3% 2rem;
     }
-    .services{
+
+    .services {
         padding-bottom: 7rem;
     }
 
+    .flex-container {
+        flex-direction: column; /* Passer en colonne sur les petits écrans */
+        align-items: center; /* Centrer les éléments */
+    }
+
+    .services-container {
+        max-width: 80%; /* Ajuste la largeur des éléments */
+    }
 }
-@media (max-width:895px){
-    .service h2{
+
+@media (max-width: 895px) {
+    .service h2 {
         margin-bottom: 3rem;
     }
-    .services-container{
-        grid-template-columns: repeat(1,1fr);
+
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-container {
+        max-width: 100%; /* Ajuste encore la largeur pour mobile */
     }
 }
+
 
 /* section compétences */
 
